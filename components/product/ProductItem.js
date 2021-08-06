@@ -38,6 +38,10 @@ const ProductItem = ({ product }) => {
                     {product.description}
                 </p>
 
+                <div className="row justify-content-between mx-0">
+                    {userLink()}
+                </div>
+
             </div>
         </div>
     )
