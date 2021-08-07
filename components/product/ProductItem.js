@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import { useContext } from 'react'
+import { DataContext } from '../../store/GlobalState'
+import { addToCart } from '../../store/Actions'
 
 const ProductItem = ({ product }) => {
+    const { state, dispatch } = useContext(DataContext)
+    const { cart } = state
+
     const userLink = () => {
         return (
             <>
