@@ -8,5 +8,10 @@ module.exports = {
     "CLOUD_UPDATE_PRESET": "nextjs_estore",
     "CLOUD_NAME": "dcstuyia4",
     "CLOUD_API": "https://api.cloudinary.com/v1_1/dcstuyia4/image/upload"
+  },
+  eslint: {
+    // Warning: Dangerously allow production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   }
 }
