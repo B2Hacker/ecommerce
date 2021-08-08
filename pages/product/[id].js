@@ -24,7 +24,7 @@ const DetailProduct = (props) => {
 
             <div className="col-md-6">
                 <img src={ product.images[tab].url } alt={ product.images[tab].url }
-                className="d-block img-thumbnail rounded mt-4 w-100"
+                className="d-block img-thumbnail rounded mt-4 w-100 zoomA"
                 style={{height: '350px'}} />
 
                 <div className="row mx-0" style={{cursor: 'pointer'}} >

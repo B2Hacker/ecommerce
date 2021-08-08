@@ -20,7 +20,15 @@ img{
   object-position: 0 30%;
 }
 
-
+.zoomA {
+  width: 1px;
+  height: auto;
+  /* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.3s;
+}
+.zoomA:hover {
+  transform: scale(1.2);
+}
 
 /*---------------- Loading ----------------*/
 @import url("./loading.css");

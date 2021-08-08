@@ -15,3 +15,5 @@ module.exports = {
     ignoreDuringBuilds: true,
   }
 }
+
+//http://localhost:3000
