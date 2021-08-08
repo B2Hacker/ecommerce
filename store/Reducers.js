@@ -2,7 +2,7 @@ import { ACTIONS } from './Actions'
 
 
 const reducers = (state, action) => {
-    switch (action.type) {
+    switch(action.type){
         case ACTIONS.NOTIFY:
             return {
                 ...state,
@@ -23,9 +23,26 @@ const reducers = (state, action) => {
                 ...state,
                 modal: action.payload
             };
+        case ACTIONS.ADD_ORDERS:
+            return {
+                ...state,
+                orders: action.payload
+            };
+        case ACTIONS.ADD_USERS:
+            return {
+                ...state,
+                users: action.payload
+            };
+        case ACTIONS.ADD_CATEGORIES:
+            return {
+                ...state,
+                categories: action.payload
+            };
         default:
             return state;
     }
 }
+
+// Done
 
 export default reducers
