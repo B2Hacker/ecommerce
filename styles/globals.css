@@ -41,3 +41,6 @@ img{
 
 /*------------Products Manager ------------*/
 @import url("./products_manager.css");
+
+/*---------------- Img hover ----------------*/
+@import url("./imghover.css");

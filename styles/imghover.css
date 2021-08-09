@@ -1,0 +1,31 @@
+img {
+    width: 100%;
+    transition: all linear 0.7s;
+}
+
+img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.products .img {
+    width: 100%;
+    transition: all linear 0.7s;
+}
+
+.products img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.products .card:hover img {
+    opacity: 0;
+}
+
+.products .card:hover img.hover-img {
+    opacity: 1;
+}
