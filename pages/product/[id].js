@@ -3,6 +3,8 @@ import { useState, useContext } from 'react'
 import { getData } from '../../utils/fetchData'
 import { DataContext } from '../../store/GlobalState'
 import { addToCart } from '../../store/Actions'
+import InnerImageZoom from 'react-inner-image-zoom'
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css'
 
 const DetailProduct = (props) => {
     const [product] = useState(props.product)
@@ -23,8 +25,8 @@ const DetailProduct = (props) => {
             </Head>
 
             <div className="col-md-6">
-                <img src={ product.images[tab].url } alt={ product.images[tab].url }
-                className="d-block img-thumbnail rounded mt-4 w-100 zoomA"
+                <InnerImageZoom src={ product.images[tab].url } alt={ product.images[tab].url }
+                zoomType="hover" zoomScale="2" className="d-block img-thumbnail rounded mt-4 w-100"
                 style={{height: '350px'}} />
 
                 <div className="row mx-0" style={{cursor: 'pointer'}} >
