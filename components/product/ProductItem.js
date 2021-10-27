@@ -58,7 +58,7 @@ const ProductItem = ({ product, handleCheck }) => {
                     onChange={() => handleCheck(product._id)} />
             }
             <img className="card-img-top" src={product.images[0].url} alt={product.images[0].url} />
-            <img className="card-img-top hover-img" src={product.images[1].url} alt={product.images[1].url} />
+            {/* <img className="card-img-top hover-img" src={product.images[1].url} alt={product.images[1].url} /> */}
             <div className="card-body">
                 <h5 className="card-title text-capitalize" title={product.title}>
                     {product.title}

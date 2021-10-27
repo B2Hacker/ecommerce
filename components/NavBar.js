@@ -69,7 +69,7 @@ function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link href="/">
-                <a className="navbar-brand">Ace Electronics</a>
+                <a className="navbar-brand">Clothing Store</a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
