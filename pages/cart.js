@@ -103,7 +103,7 @@ const Cart = () => {
 
             <div className="col-md-8 text-secondary table-responsive my-3">
 
-                <h2 className="text-uppercase">Shopping Cart</h2>
+                <h2 className="text-uppercase">Carrito de compras</h2>
 
                 <table className="table my-3">
                     <tbody>
@@ -118,14 +118,14 @@ const Cart = () => {
 
             <div className="col-md-4 my-3 text-right text-uppercase text-secondary">
                 <form>
-                    <h2>Shipping</h2>
+                    <h2>Envio</h2>
 
-                    <label htmlFor="address">Address</label>
+                    <label htmlFor="address">Direccion</label>
                     <input type="text" name="address" id="address"
                         className="form-control mb-2" value={address}
                         onChange={e => setAddress(e.target.value)} />
 
-                    <label htmlFor="mobile">Mobile</label>
+                    <label htmlFor="mobile">Telefono</label>
                     <input type="text" name="mobile" id="mobile"
                         className="form-control mb-2" value={mobile}
                         onChange={e => setMobile(e.target.value)} />
@@ -134,7 +134,7 @@ const Cart = () => {
                 <h3>Total: <span className="text-danger">${total}</span></h3>
 
                 <Link href={auth.user ? '#!' : '/signin'}>
-                    <a className="btn btn-dark my-2" onClick={handlePayment}>Proceed with payment</a>
+                    <a className="btn btn-dark my-2" onClick={handlePayment}>Proceder con el pago</a>
                 </Link>
 
             </div>
