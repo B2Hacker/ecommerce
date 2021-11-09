@@ -59,12 +59,12 @@ const deleteProduct = async (req, res) => {
         const result = await auth(req, res)
 
         if (result.role !== 'admin')
-            return res.status(400).json({ err: 'Authentication is not valid.' })
+            return res.status(400).json({ err: 'La autenticación no es válida.' })
 
         const { id } = req.query
 
         await Products.findByIdAndDelete(id)
-        res.json({ msg: 'Deleted a product.' })
+        res.json({ msg: 'Se ha borrado un producto.' })
 
     } catch (err) {
         return res.status(500).json({ err: err.message })

@@ -54,14 +54,14 @@ const ProductsManager = () => {
         const files = [...e.target.files]
 
         if (files.length === 0)
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Files does not exist.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'Los archivos no existen.' } })
 
         files.forEach(file => {
             if (file.size > 1024 * 1024)
-                return err = 'The largest image size is 1mb'
+                return err = 'El tamaño de la imagen tiene que ser de 1mb'
 
             if (file.type !== 'image/jpeg' && file.type !== 'image/png')
-                return err = 'Image format is incorrect.'
+                return err = 'El formato de la imagen es incorrecto.'
 
             num += 1;
             if (num <= 5) newImages.push(file)
@@ -72,7 +72,7 @@ const ProductsManager = () => {
 
         const imgCount = images.length
         if (imgCount + newImages.length > 5)
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Select up to 5 images.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'Selecciona hasta 5 imágenes.' } })
         setImages([...images, ...newImages])
     }
 
@@ -85,10 +85,10 @@ const ProductsManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (auth.user.role !== 'admin')
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Authentication is not valid.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'La autenticación no es válida.' } })
 
         if (!title || !price || !inStock || !description || !content || category === 'all' || images.length === 0)
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Please add all the fields.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'Por favor, añada todos los campos.' } })
 
 
         dispatch({ type: 'NOTIFY', payload: { loading: true } })

@@ -54,13 +54,13 @@ const Profile = () => {
     const changeAvatar = (e) => {
         const file = e.target.files[0]
         if (!file)
-            return dispatch({ type: 'NOTIFY', payload: { error: 'File does not exist.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'El archivo no existe.' } })
 
         if (file.size > 1024 * 1024) //1mb
-            return dispatch({ type: 'NOTIFY', payload: { error: 'The largest image size is 1mb.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'El tamaño más grande de la imagen es de 1mb.' } })
 
         if (file.type !== "image/jpeg" && file.type !== "image/png") //1mb
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Image format is incorrect.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'El formato de la imagen es incorrecto.' } })
 
         setData({ ...data, avatar: file })
     }

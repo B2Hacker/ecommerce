@@ -14,9 +14,9 @@ const Categories = () => {
 
     const createCategory = async () => {
         if (auth.user.role !== 'admin')
-            return dispatch({ type: 'NOTIFY', payload: { error: 'Authentication is not vaild.' } })
+            return dispatch({ type: 'NOTIFY', payload: { error: 'La autenticación no es válida.' } })
 
-        if (!name) return dispatch({ type: 'NOTIFY', payload: { error: 'Name can not be left blank.' } })
+        if (!name) return dispatch({ type: 'NOTIFY', payload: { error: 'El nombre no puede dejarse en blanco.' } })
 
         dispatch({ type: 'NOTIFY', payload: { loading: true } })
 
