@@ -111,6 +111,7 @@ const ProductsManager = () => {
 
     }
 
+    if (!auth.user) return null;
     return (
         <div className="products_manager">
             <Head>
@@ -169,11 +170,11 @@ const ProductsManager = () => {
 
                 <div className="col-md-6 my-4">
                     <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text">Upload</span>
-                        </div>
+{/*                     <button type="submit" className="btn btn-info my-2 px-4">
+                        Select Images
+                    </button> */}
                         <div className="custom-file border rounded">
-                            <input type="file" className="custom-file-input"
+                            <input type="file" className=""
                                 onChange={handleUploadInput} multiple accept="image/*" />
                         </div>
 

@@ -41,6 +41,8 @@ const Categories = () => {
         setName(catogory.name)
     }
 
+
+    if (!auth.user) return null;
     return (
         <div className="col-md-6 mx-auto my-3">
             <Head>
