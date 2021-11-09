@@ -62,6 +62,7 @@ const Home = (props) => {
     }
 
     return (
+        <div className="container">
         <div className="home_page">
             <Head>
                 <title>Home Page</title>
@@ -102,6 +103,7 @@ const Home = (props) => {
                     </button>
             }
 
+        </div>
         </div>
     )
 }
