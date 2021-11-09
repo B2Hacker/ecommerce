@@ -13,13 +13,13 @@ const ProductItem = ({ product, handleCheck }) => {
             <>
                 <Link href={`product/${product._id}`}>
                     <a className="btn btn-info"
-                        style={{ marginRight: '5px', flex: 1 }}>View</a>
+                        style={{ marginRight: '5px', flex: 1 }}>Mostrar</a>
                 </Link>
                 <button className="btn btn-success"
                     style={{ marginLeft: '5px', flex: 1 }}
                     disabled={product.inStock === 0 ? true : false}
                     onClick={() => dispatch(addToCart(product, cart))} >
-                    Buy
+                    Comprar
                 </button>
             </>
         )
@@ -30,7 +30,7 @@ const ProductItem = ({ product, handleCheck }) => {
             <>
                 <Link href={`create/${product._id}`}>
                     <a className="btn btn-info"
-                        style={{ marginRight: '5px', flex: 1 }}>Edit</a>
+                        style={{ marginRight: '5px', flex: 1 }}>Editar</a>
                 </Link>
                 <button className="btn btn-danger"
                     style={{ marginLeft: '5px', flex: 1 }}
@@ -42,7 +42,7 @@ const ProductItem = ({ product, handleCheck }) => {
                             title: product.title, type: 'DELETE_PRODUCT'
                         }]
                     })} >
-                    Delete
+                    Borrar
                 </button>
             </>
         )
@@ -68,8 +68,8 @@ const ProductItem = ({ product, handleCheck }) => {
                     <h6 className="text-danger">MXM ${product.price}</h6>
                     {
                         product.inStock > 0
-                            ? <h6 className="text-danger">In Stock: {product.inStock}</h6>
-                            : <h6 className="text-danger">Out Stock</h6>
+                            ? <h6 className="text-danger">Unidades: {product.inStock}</h6>
+                            : <h6 className="text-danger">Sin Unidades</h6>
                     }
                 </div>
 

@@ -62,7 +62,7 @@ const Home = (props) => {
     }
 
     return (
-        <div className="container">
+        <div className="">
         <div className="home_page">
             <Head>
                 <title>Home Page</title>
@@ -79,7 +79,7 @@ const Home = (props) => {
                     <button className="btn btn-danger ml-2"
                         data-toggle="modal" data-target="#exampleModal"
                         onClick={handleDeleteAll}>
-                        DELETE ALL
+                        Eliminar Todos
                     </button>
                 </div>
             }
@@ -87,7 +87,7 @@ const Home = (props) => {
             <div className="products">
                 {
                     products.length === 0
-                        ? <h2>No Products</h2>
+                        ? <h2>No Productos</h2>
 
                         : products.map(product => (
                             <ProductItem key={product._id} product={product} handleCheck={handleCheck} />
@@ -99,7 +99,7 @@ const Home = (props) => {
                 props.result < page * 6 ? ""
                     : <button className="btn btn-outline-info d-block mx-auto mb-4"
                         onClick={handleLoadmore}>
-                        Load more
+                        Ver mas
                     </button>
             }
 

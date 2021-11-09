@@ -75,6 +75,24 @@ const Signin = () => {
                 <p className="my-2">
                     You don&apos;t have an account? <Link href="/register"><a style={{ color: 'crimson' }}>Register Now</a></Link>
                 </p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </form>
         </div>
     )

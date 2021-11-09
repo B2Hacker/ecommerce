@@ -121,19 +121,19 @@ const ProductsManager = () => {
                 <div className="col-md-6">
 
                     <input type="text" name="title" value={title}
-                        placeholder="Title" className="d-block my-4 w-100 p-2"
+                        placeholder="Titulo del articulo" className="d-block my-4 w-100 p-2"
                         onChange={handleChangeInput} />
 
                     <div className="row">
                         <div className="col-sm-6">
-                            <label htmlFor="price">Price</label>
+                            <label htmlFor="price">Precio</label>
                             <input type="number" name="price" value={price}
                                 placeholder="Price" className="d-block w-100 p-2"
                                 onChange={handleChangeInput} />
                         </div>
 
                         <div className="col-sm-6">
-                            <label htmlFor="price">In Stock</label>
+                            <label htmlFor="price">Disponibilidad</label>
                             <input type="number" name="inStock" value={inStock}
                                 placeholder="inStock" className="d-block w-100 p-2"
                                 onChange={handleChangeInput} />
@@ -141,17 +141,17 @@ const ProductsManager = () => {
                     </div>
 
                     <textarea name="description" id="description" cols="30" rows="4"
-                        placeholder="Description" onChange={handleChangeInput}
+                        placeholder="Descripcion" onChange={handleChangeInput}
                         className="d-block my-4 w-100 p-2" value={description} />
 
                     <textarea name="content" id="content" cols="30" rows="6"
-                        placeholder="Content" onChange={handleChangeInput}
+                        placeholder="Descripcion del Contenido" onChange={handleChangeInput}
                         className="d-block my-4 w-100 p-2" value={content} />
 
                     <div className="input-group-prepend px-0 my-2">
                         <select name="category" id="category" value={category}
                             onChange={handleChangeInput} className="custom-select text-capitalize">
-                            <option value="all">All Products</option>
+                            <option value="all">Todos los Productos</option>
                             {
                                 categories.map(item => (
                                     <option key={item._id} value={item._id}>
@@ -163,7 +163,7 @@ const ProductsManager = () => {
                     </div>
 
                     <button type="submit" className="btn btn-info my-2 px-4">
-                        {onEdit ? 'Update' : 'Create'}
+                        {onEdit ? 'Actualizar' : 'Crear'}
                     </button>
 
                 </div>

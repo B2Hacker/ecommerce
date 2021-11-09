@@ -43,13 +43,13 @@ const DetailProduct = (props) => {
 
             <div className="col-md-6 mt-3">
                 <h2 className="text-uppercase">{product.title}</h2>
-                <h5 className="text-danger">USD ${product.price}</h5>
+                <h5 className="text-danger">MXM ${product.price}</h5>
 
                 <div className="row mx-0 d-flex justify-content-between">
                     {
                         product.inStock > 0
-                        ? <h6 className="text-danger">In Stock: {product.inStock}</h6>
-                        : <h6 className="text-danger">Out Stock</h6>
+                        ? <h6 className="text-danger">Unidades: {product.inStock}</h6>
+                        : <h6 className="text-danger">No Unidades</h6>
                     }
 
                     <h6 className="text-danger">Sold: {product.sold}</h6>
@@ -67,6 +67,7 @@ const DetailProduct = (props) => {
 
             </div>
         </div>
+        
     )
 }
 

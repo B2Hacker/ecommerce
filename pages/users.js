@@ -11,7 +11,7 @@ const Users = () => {
     return (
         <div className="table-responsive">
             <Head>
-                <title>Users</title>
+                <title>Usuarios</title>
             </Head>
 
             <table className="table w-100">
@@ -20,10 +20,10 @@ const Users = () => {
                         <th></th>
                         <th>ID</th>
                         <th>Avatar</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th>Email</th>
                         <th>Admin</th>
-                        <th>Action</th>
+                        <th>Accion</th>
                     </tr>
                 </thead>
 
@@ -56,19 +56,19 @@ const Users = () => {
                                         auth.user.root && auth.user.email !== user.email
                                             ? `/edit_user/${user._id}` : '#!'
                                     }>
-                                        <a><i className="fas fa-edit text-info mr-2" title="Edit"></i></a>
+                                        <a><i className="fas fa-edit text-info mr-2" title="Editar"></i></a>
                                     </Link>
 
                                     {
                                         auth.user.root && auth.user.email !== user.email
-                                            ? <i className="fas fa-trash-alt text-danger ml-2" title="Remove"
+                                            ? <i className="fas fa-trash-alt text-danger ml-2" title="Eliminar"
                                                 data-toggle="modal" data-target="#exampleModal"
                                                 onClick={() => dispatch({
                                                     type: 'ADD_MODAL',
                                                     payload: [{ data: users, id: user._id, title: user.name, type: 'ADD_USERS' }]
                                                 })}></i>
 
-                                            : <i className="fas fa-trash-alt text-danger ml-2" title="Remove"></i>
+                                            : <i className="fas fa-trash-alt text-danger ml-2" title="Eliminar"></i>
                                     }
 
                                 </th>
@@ -77,7 +77,7 @@ const Users = () => {
                     }
                 </tbody>
             </table>
-
+            <br/>
         </div>
     )
 }

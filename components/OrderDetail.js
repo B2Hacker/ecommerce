@@ -31,33 +31,33 @@ const OrderDetail = ({ orderDetail, state, dispatch }) => {
                     <div key={order._id} style={{ margin: '20px auto' }} className="row justify-content-around">
 
                         <div className="text-uppercase my-3" style={{ maxWidth: '600px' }}>
-                            <h2 className="text-break">Order {order._id}</h2>
+                            <h2 className="text-break">Pedido: {order._id}</h2>
 
                             <div className="mt-4 text-secondary">
-                                <h3>Shipping</h3>
-                                <p>Name: {order.user.name}</p>
+                                <h3>Informacion de Envío</h3>
+                                <p>Nombre: {order.user.name}</p>
                                 <p>Email: {order.user.email}</p>
-                                <p>Address: {order.address}</p>
-                                <p>Mobile: {order.mobile}</p>
+                                <p>Direccion: {order.address}</p>
+                                <p>Telefono: {order.mobile}</p>
 
                                 <div className={`alert ${order.delivered ? 'alert-success' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                                     {
-                                        order.delivered ? `Deliverd on ${order.updatedAt}` : 'Not Delivered'
+                                        order.delivered ? `Entregado en ${order.updatedAt}` : 'No Entregado'
                                     }
                                     {
                                         auth.user.role === 'admin' && !order.delivered &&
                                         <button className="btn btn-dark text-uppercase"
                                             onClick={() => handleDelivered(order)}>
-                                            Mark as delivered
+                                            Marca como entregado
                                         </button>
                                     }
 
                                 </div>
 
-                                <h3>Payment</h3>
+                                <h3>Pago</h3>
                                 {
-                                    order.method && <h6>Method: <em>{order.method}</em></h6>
+                                    order.method && <h6>Metodo: <em>{order.method}</em></h6>
                                 }
 
                                 {
@@ -67,13 +67,13 @@ const OrderDetail = ({ orderDetail, state, dispatch }) => {
                                 <div className={`alert ${order.paid ? 'alert-success' : 'alert-danger'}
                         d-flex justify-content-between align-items-center`} role="alert">
                                     {
-                                        order.paid ? `Paid on ${order.dateOfPayment}` : 'Not Paid'
+                                        order.paid ? `Pagado en ${order.dateOfPayment}` : 'No pagado'
                                     }
 
                                 </div>
 
                                 <div>
-                                    <h3>Order Items</h3>
+                                    <h3>Articulos en el pedido</h3>
                                     {
                                         order.cart.map(item => (
                                             <div className="row border-bottom mx-0 p-2 justify-content-betwenn

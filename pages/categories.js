@@ -46,17 +46,17 @@ const Categories = () => {
     return (
         <div className="col-md-6 mx-auto my-3">
             <Head>
-                <title>Categories</title>
+                <title>Categorias</title>
             </Head>
 
             <div className="input-group mb-3">
                 <input type="text" className="form-control"
-                    placeholder="Add a new category" value={name}
+                    placeholder="Añadir nueva categoria" value={name}
                     onChange={e => setName(e.target.value)} />
 
                 <button className="btn btn-secondary ml-1"
                     onClick={createCategory}>
-                    {id ? "Update" : "Create"}
+                    {id ? "Actualizar" : "Crear"}
                 </button>
             </div>
 
@@ -67,10 +67,10 @@ const Categories = () => {
                             {catogory.name}
 
                             <div style={{ cursor: 'pointer' }}>
-                                <i className="fas fa-edit mr-2 text-info"
+                                <i className="fas fa-edit mr-2 text-info" title="Editar"
                                     onClick={() => handleEditCategory(catogory)}></i>
 
-                                <i className="fas fa-trash-alt text-danger"
+                                <i className="fas fa-trash-alt text-danger" title="Eliminar"
                                     data-toggle="modal" data-target="#exampleModal"
                                     onClick={() => dispatch({
                                         type: 'ADD_MODAL',

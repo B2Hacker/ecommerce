@@ -29,13 +29,13 @@ function NavBar() {
         return (
             <>
                 <Link href="/users">
-                    <a className="dropdown-item">Users</a>
+                    <a className="dropdown-item">Usuarios</a>
                 </Link>
                 <Link href="/create">
-                    <a className="dropdown-item">Products</a>
+                    <a className="dropdown-item">Productos</a>
                 </Link>
                 <Link href="/categories">
-                    <a className="dropdown-item">Categories</a>
+                    <a className="dropdown-item">Categorias</a>
                 </Link>
             </>
         )
@@ -54,13 +54,13 @@ function NavBar() {
 
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <Link href="/profile">
-                        <a className="dropdown-item">Profile</a>
+                        <a className="dropdown-item">Perfil</a>
                     </Link>
                     {
                         auth.user.role === 'admin' && adminRouter()
                     }
                     <div className="dropdown-divider"></div>
-                    <button className="dropdown-item" onClick={handleLogout}>Logout</button>
+                    <button className="dropdown-item" onClick={handleLogout}>Cerrar sesion</button>
                 </div>
             </li>
         )
@@ -69,7 +69,7 @@ function NavBar() {
     return (
             <nav className="navbar navbar-expand-lg navbar-light ">
                 <Link href="/">
-                    <a className="navbar-brand"><img src="logo3.png" width="200" height="100" /></a>
+                    <a className="navbar-brand"><img src="1_1.png" width="220" height="120" /></a>
                 </Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -92,7 +92,7 @@ function NavBar() {
                                             }}>
                                             {cart.length}
                                         </span>
-                                    </i> Cart
+                                    </i> Carrito
                                 </a>
                             </Link>
                         </li>
@@ -102,7 +102,7 @@ function NavBar() {
                                 ? <li className="nav-item">
                                     <Link href="/signin">
                                         <a className={"nav-link" + isActive('/signin')}>
-                                            <i className="fas fa-user"></i> Sign in</a>
+                                            <i className="fas fa-user"></i> Ingresar</a>
                                     </Link>
                                 </li>
                                 : loggedRouter()
